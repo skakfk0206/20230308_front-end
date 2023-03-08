@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML table</title>
+
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML 표 다루기</h1>
+    <!-- <table> : 테이블의 시작과 끝을 명시
+        <caption> : 표의 제목 
+        <tr> : 테이블 로우(Row)의 줄임말.
+        <th> : 테이블 헤더(Header)의 줄임말. 데이터의 이름을 나타난다. 
+        <td> : 테이블 데이터(Data)각 셀 즉, 실제 값에 해당 
+        -->
+
+    <table>
+      <caption>
+        성적표
+      </caption>
+      <tr>
+        <th>반</th>
+        <th>이름</th>
+        <th>성적</th>
+      </tr>
+      <tr>
+        <td>A반</td>
+        <td>박지수</td>
+        <td>100점</td>
+      </tr>
+      <tr>
+        <td>B반</td>
+        <td>김민수</td>
+        <td>90점</td>
+      </tr>
+    </table>
+    <h3>상품 구성</h3>
+    <table>
+      <caption>
+        선물용과 가정용 구성
+      </caption>
+      <!-- col, colgroup -->
+      <colgroup>
+         <col style="background-color: aliceblue;">
+         <col />
+        <col style="width: 150px;"/>
+        <col style="width: 150px;"/>
+      </colgroup>
+      <thead>
+        <tr>
+            <th>용도</th>
+            <th>중량</th>
+            <th>개수</th>
+            <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td rowspan="2">선물용</th>
+        <td>3kg</th>
+        <td>11~16과</th>
+        <td>35,000원</th>
+      </tr>
+      <tr>
+        <!-- <td>선물용</th> -->
+        <td>5kg</th>
+        <td>18~26과</th>
+        <td>52,000원</th>
+      <tr>
+        <td rowspan="2">가정용</th>
+        <td>3kg</th>
+        <td>11~16과</th>
+        <td>30,000원</th>
+      </tr>
+      <tr>
+        <!-- <td>가정용</th> -->
+        <td>5kg</th>
+        <td>18~26과</th>
+        <td>47,000원</th>
+      </tr>
+      </tr>
+    </tbody>
+    </table>
+<br>
+    <table>
+        <caption>요안도라 객실</caption>
+        <thead>
+
+        </thead>
+        <tr>
+            <th>방이름</th>
+            <th>대상</th>
+            <th>크기</th>
+            <th>가격</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>유체방</th>
+                <td>여성 도미토리</th>
+                <td rowspan="3">4인실</th>
+                <td rowspan="4">1인20,000원</th>
+            </tr>
+            <tr>
+                <td rowspan="2">동백방</th>
+                <td>동성 도미토리</th>
+                <!-- <td>4인실</th> -->
+                <!-- <td>1인20,000원</th> -->
+            </tr>
+            <tr>
+                <!-- <td>동백방</th> -->
+                <td>가족 1팀</th>
+                <!-- <td>4인실</th> -->
+                <!-- <td>1인20,000원</th> -->
+            </tr>
+            <tr>
+                <td>천혜향방</th>
+                <td> - </th>
+                <td>2인실</th>
+                <!-- <td>1인20,000원</th> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+             <td colspan="4">바깥채 전체를 렌트합니다</td>
+            </tr>
+         </tfoot>
+    </table>
+    
+
+
+
+  </body>
+</html>

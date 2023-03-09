@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 미디어</title>
+  </head>
+  <body>
+    <h1>HTML 미디어 관련태그</h1>
+
+    <h2>img 태그</h2>
+
+    <!-- 
+        img : jpg,png,gif 등의 이미지 파일을 출력한다
+        1)src : 출력하고자하는 파일의 경로 지정한다
+        2)alt : 대체 텍스트 파일을 불러 오는데 실패 했을때 출력된다.
+          => 화면 낭독기가 읽어준다
+        3)width(너비), height(높이)를 통해 사진의 크기를 지정할수있다.
+          => 너비와 높이를 지정하지 않으면 원본크기 그대로 출력된다
+          => 너비와 높이 중 하나만 지정하면 원본의 비율대로 늘어난다.
+          => 둘 다 지정하면 원본 비율이 깨진다.     
+    -->
+
+    <img src="./assets/62f9a36ea3cea.jpg" alt="강아지" width="300px" />
+    <img
+      src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://
+      t1.daumcdn.net/brunch/service/user/32E9/image/BA2Qyx3O2o
+      TyEOsXe2ZtE8cRqGk.JPG"
+      alt="강아지"
+      width="300px"
+    />
+
+    <!-- <img src="./assets/잘못된경로.jpg" alt="사진을 찾을수 없습니다"/> -->
+
+    <h2>audio 태그</h2>
+    <!-- 
+        audio : 음악파일을 재생한다.
+           1) src : 재생하고자 하는 파일의 경로
+           2) controls : 컨트롤바의 유무를 지정. 속성값이 필요없다.
+           3) autoplay : 자동재생 여부를 지정. 속성값이 필요없다.
+                   => 사용자 경험떄문에 브라우저에서 막는다.
+                   => JS 통해서 자동재생이 가능하다.
+            4) loop : 반복재생 여부를 지정한다. 속성값이 필요없다.
+            5) muted : 음소거 여부를 지정한다. 속성값이 필요없다.
+                   
+     -->
+    <audio
+      src="./assets/싸이_(Psy)_That_That_(Prod._&_Feat._SUGA_of_BTS).mp3"
+      controls
+      autoplay
+      loop
+      muted
+    ></audio>
+
+    <h2>video 태그</h2>
+
+    <video
+      src="./assets/Clouds_-_64759.mp4"
+      width="500"
+      controls
+      loop
+      muted
+      autoplay
+    ></video>
+  </body>
+</html>

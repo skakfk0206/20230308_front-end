@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS display</title>
+    <style>
+      .consectetur {
+        text-align: center;
+      }
+      .block {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      .inline {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      a {
+        display: block;
+        /* display: none; */
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        border-radius: 50%;
+        text-decoration: none;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS display</h1>
+    <h2>display</h2>
+    <p>요소가 화면에 배치되는 방법을 지정한다.</p>
+    <ul>
+      <li>block : 요소를 블랙 요소로 처리한다.</li>
+      <li>inline : 요소를 인라인 요소로 처리한다.</li>
+      <li>
+        inline-block : 인라인과 블록의 특징 모두 갖는다. <br />
+        너비와 높이가 지정이 가능하면서 텍스트처럼 취급된다.
+      </li>
+      <li>none : 화면에 요소를 출력 하지 않는다.</li>
+    </ul>
+
+    <div class="consectetur">
+      <div class="block">블록</div>
+      <span class="inline">인라인</span>
+      <a href="">Googie</a>
+    </div>
+  </body>
+</html>

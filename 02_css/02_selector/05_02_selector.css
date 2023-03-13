@@ -1,0 +1,69 @@
+.gnb_list li a {
+  color: red;
+}
+
+.gnb_list > li > a {
+  font-weight: bold;
+}
+
+/* 인접 형제 선택자 */
+.taget + li > a {
+  color: blue;
+}
+/* 일반 형제 선택자 */
+.taget ~ li > a {
+  font-size: 1.5rem;
+}
+/* 속성 선택자 */
+a[href="https://google.com"]
+{
+  color: chartreuse; !important;
+}
+
+input[type="email"] {
+    border-color: green;
+    border-style: solid;
+}
+input[required] {
+    border-color: red;
+}
+
+/* 무우스가 올라가 있는 동안 */
+h2:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 클릭하고 있는동안 */
+h2:active {
+    color: red;
+}
+ /* 포커스 되어있는 동안     */
+input:focus {
+    background-color: azure;
+}
+/* n번째 자식 요소인 */
+.fruits li:nth-child(2){
+    color:blueviolet;
+}
+/* ::before, ::after :요소의 앞뒤로 내용을 추가한다.
+      => content 속성이 들어가야 화면에 출력된다. */
+.fruits li::before {
+    content: "new";
+    display: inline-block;
+    padding: 0 5px;
+    background-color: red;
+    color: white;
+
+    border-radius: 2px;
+    margin-left: 10px ;
+    font-size: 0.8em;
+}
+.fruits li::after {
+    content: ""; /* 무조건 있어야함*/
+    display: inline-block;
+    width: 10px;
+    height: 10px; 
+    border-radius: 50%;
+    background-color: yellow;
+}

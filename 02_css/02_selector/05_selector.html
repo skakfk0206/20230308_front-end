@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./05_02_selector.css" />
+  </head>
+  <body>
+    <h1>CSS 고급 선택자</h1>
+
+    <h2>하위 요소 선택자</h2>
+    <p>특정 하위 요소의 후손 요소만을 선택한다. 뜨어쓰기를 통해 구분한다.</p>
+
+    <input type="text" required />
+    <input type="email" />
+
+    <h2>자식 선택자</h2>
+    <p>
+      후손이 아닌 바로 밑에 자식요소만을 선택한다. <br />
+      기호 > 를 사용한다.
+    </p>
+
+    <h2>인접 형제 선택자</h2>
+    <p>특정 요소 바로 뒤에오는 형제 요소 1개만을 선택한다.</p>
+
+    <h2>일반 형제 선택자</h2>
+    <p>특정 요소 바로 뒤에오는 모든 형제 요소를 선택한다.</p>
+
+    <h2>가상 클래스</h2>
+    <p>사용자가 특정 행동을 했을 때 가상의 클래스가 붙은 것처럼 동작한다.</p>
+    <br />
+    "선택자 :가상클래스" 의 형태로 사용한다.
+     </p>
+
+     <h2>가상 요소</h2>
+     <p>
+        HTML 문서상의 작성되지 않았지만, 디자인적으로 요소가 필요할 때 가상으로
+        만들어 낸다. <br>
+        '선택자 :: 가상요소' 의 형태로 사용한다.
+        
+     </p>
+
+    <hr />
+    <ul class="gnb_list">
+      <li class="taget">
+        <a href="https://google.com"> html </a>
+        <ul>
+          <li><a href="">html 문법</a></li>
+        </ul>
+      </li>
+      <li><a href=""> css </a></li>
+      <li><a href=""> javaScript</a></li>
+    </ul>
+
+    <h2>과일 목록</h2>
+    <ul class="fruits">
+      <li>사과</li>
+      <li>포도</li>
+      <li>오렌지</li>
+    </ul>
+  </body>
+</html>

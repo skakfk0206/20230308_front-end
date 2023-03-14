@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit; /*부모 스타일에서 상속받는다.*/
+  text-decoration: none;
+}
+
+#gnb {
+  text-align: center;
+}
+
+#gnbList {
+  display: inline-block;
+}
+
+#gnbList li {
+  float: left;
+  text-align: center;
+}
+
+#gnbList li a:hover {
+  background-color: #eee;
+}
+
+#gnbList li a {
+  display: block;
+  width: 100px;
+  padding: 10px 0;
+}

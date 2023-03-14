@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+
+        transition-duration: 1s; /*서서히 호버*/
+        /* transition-delay: 0.5s; 호버시 지연후 변화 */
+        transition-timing-function: ease;
+        /* transition-property: width; */
+        /* transition: width 1000ms 500ms linear, background-color 200ms; */
+      }
+
+      .box:hover {
+        width: 200px;
+        background-color: #000;
+        transition-duration: 1s; /*서서히 호버*/
+        transition-delay: 0.5s; /*호버시 지연후 변화*/
+        transition-timing-function: ease;
+        /* transition-property: width; */
+        /* transition: width 1000ms 500ms linear, background-color 200ms; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS transition</h1>
+    <p>
+      요소의 CSS 속성값에 변화가 있을 때 변화되는 시간, 폭, 지연시간 등을
+      지정할수 있다.
+    </p>
+    <ul>
+      <li>
+        transition-property : 트렌지션을 적용할 속성을 선택한다. <br />
+        기본값은 all.
+      </li>
+      <li>transition-duration : 트렌지션의 지연시간을 지정한다.</li>
+      <li>transition-delay : 트렌지션의 지연시간을 지정한다.</li>
+      <li>transition-timing-function : 트렌지션의 변화폭을 지정한다.</li>
+      <li>
+        transition : 단축 속성. 순서는 duration과 delay 순서만 지키면된다.
+      </li>
+    </ul>
+
+    <div class="box"></div>
+  </body>
+</html>

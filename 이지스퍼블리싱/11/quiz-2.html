@@ -1,25 +1,41 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>연습문제 2</title>
-	<style>	
-		#container {
-			width:200px;
-			margin:30px auto;
-		}
-    img {
-      border:1px solid #ccc;
-      border-radius:50%;      
-      box-shadow: 5px 5px 30px 2px #000;
-    }
-	</style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>연습문제 2</title>
+    <style>
+      #container {
+        width: 200px;
+        margin: 30px auto;
 
-<body>
-  <div id="container">
-	  <img src="images/bear.jpg" alt="곰인형 사진">
-  </div>
-</body>
+        perspective: 200px;
+      }
+      img {
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        box-shadow: 5px 5px 30px 2px #000;
+
+        animation: rotate 3s 0s infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotateY(0);
+        }
+        50% {
+          transform: rotateY(180deg);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <img src="images/bear.jpg" alt="곰인형 사진" />
+    </div>
+  </body>
 </html>

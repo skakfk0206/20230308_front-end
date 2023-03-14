@@ -1,13 +1,13 @@
 #container {
-  width:1000px;
-  margin:20px auto;
+  width: 1000px;
+  margin: 20px auto;
 }
 h1 {
-  text-align:center;
+  text-align: center;
 }
 .prod-list {
-  list-style:none;
-  padding:0;
+  list-style: none;
+  padding: 0;
 }
 .prod-list li {
   float: left;
@@ -16,8 +16,21 @@ h1 {
   overflow: hidden;
 }
 .prod-list img {
-  margin:0;
-  padding:0;
-  float:left;
-  z-index:5;
-} 
+  margin: 0;
+  padding: 0;
+  float: left;
+  z-index: 5;
+}
+
+.prod-list .caption {
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  height: 200px;
+  padding-top: 20px;
+
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.6 ease-in-out;
+  z-index: 10;
+}

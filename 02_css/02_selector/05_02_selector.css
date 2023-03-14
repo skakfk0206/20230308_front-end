@@ -28,7 +28,7 @@ input[required] {
     border-color: red;
 }
 
-/* 무우스가 올라가 있는 동안 */
+/* 마우스가 올라가 있는 동안 */
 h2:hover {
     background-color: black;
     color: white;

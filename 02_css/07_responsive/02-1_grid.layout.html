@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        color: black;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        border: 3px solid black;
+
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 100px 1fr 100px;
+
+        /*직관적으로columns,rows 조정*/
+        grid-template-areas:
+          "헤더 헤더"
+          "사이드바 메인"
+          "푸터 푸터";
+      }
+
+      .헤더 {
+        grid-area: 헤더;
+        background-color: rgb(197, 191, 202);
+      }
+      .사이드바 {
+        grid-area: 사이드바;
+        background-color: rgb(222, 220, 224);
+      }
+      .메인 {
+        grid-area: 메인;
+        background-color: whitesmoke;
+      }
+      .푸터 {
+        grid-area: 푸터;
+        background-color: rgb(197, 191, 202);
+      }
+
+      /* .헤더 {
+        grid-column: 1 / -1;
+
+        background-color: rgb(197, 191, 202);
+      }
+      .사이드바 {
+        width: 200px;
+        background-color: rgb(222, 220, 224);
+      }
+      .메인 {
+        grid-column: 2 / -1;
+        background-color: whitesmoke;
+      }
+      .푸터 {
+        grid-column: 1 /-1;
+        background-color: rgb(197, 191, 202);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="헤더">
+        <h2>헤더 영역</h2>
+      </div>
+      <div class="사이드바">
+        <h2>사이드 바 영역</h2>
+      </div>
+      <div class="메인">
+        <h2>메인 영역</h2>
+      </div>
+      <div class="푸터">
+        <h2>푸터 영역</h2>
+      </div>
+    </div>
+  </body>
+</html>

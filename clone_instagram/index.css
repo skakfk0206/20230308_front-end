@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #Instagram {
+  text-decoration: none;
+  color: inherit;
+  background-color: aqua;
+} */
+
+li {
+  list-style: none;
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  /* border: 3px solid #eee; */
+
+  text-align: center;
+  width: 350px;
+}
+#loginFormBox {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 40px;
+  border: 1px solid rgb(181, 195, 199);
+  margin-bottom: 10px;
+}
+
+#logo {
+  margin: 36px 0 12px;
+}
+
+#logo a {
+  display: inline-block;
+  width: 175px;
+  height: 51px;
+  font-size: 0px;
+  /* background-clip: border-box; */
+  /* background: url("./assets/ajlEU-wEDyo\\(1\).png") -414px -259px no-repeat; */
+  /* background-image: url("./assets/ajlEU-wEDyo\\(r1\).jpg"); */
+  background-color: aqua;
+}
+
+.inputWrapper {
+  margin-top: 24px;
+  /* background-color: #ddd; */
+}
+
+.inputWrapper .inputBox {
+  padding: 9px 7px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: rgb(105, 29, 29);
+}
+
+.inputWrapper input {
+  width: 100%;
+  height: 36px;
+  padding-bottom: 12px;
+
+  border: 0.3px solid #888;
+  margin: 1%;
+  outline: none;
+  background: none;
+
+  /* background-color: aqua; */
+}
+
+.inputWrapper .inputBox {
+  margin-bottom: 6px;
+}
+#loginFormBox button {
+  width: 100%;
+
+  border-radius: 8px;
+  background-color: rgb(0, 149, 246);
+  border: none;
+  outline: none;
+  padding: 7px;
+  color: #fff;
+  font-weight: 700;
+  opacity: 0.7;
+
+  margin: 8px 0;
+}
+.divideLine {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 18px;
+}
+
+.divideLine span {
+  margin: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #888;
+}
+
+.divideLine::before,
+.divideLine::after {
+  content: "";
+  flex: 1;
+  width: 90px;
+  border-bottom: 1px solid #bbb;
+}
+
+.btnFacebook {
+  color: #385185;
+  font-weight: 700;
+  margin: 8px;
+
+  text-decoration: none;
+  font-size: 14px;
+}
+.btnpassword {
+  font-size: 14px;
+
+  color: #385185;
+  font-weight: 700;
+  margin: 8px;
+
+  text-decoration: none;
+}

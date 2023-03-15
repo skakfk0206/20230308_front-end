@@ -12,9 +12,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center; /* 주축 */
-        align-items: center;
+        align-items: center; /*교차축*/
         flex-wrap: nowrap;
-        gap: 10px;
+        gap: 10px; /*아이템 간의 간격*/
         height: 500px;
 
         border: 3px solid black;
@@ -39,8 +39,8 @@
         flex-shrink: 2;
 
         flex: 1 1 0%;
-        flex: 1; /* grow :1, shrink : 1, basis: 0% */
-        order: 100;
+        flex: 1; /* grow :1, shrink : 1, basis: 0%  한번의 사용 */
+        order: 100; /*아이템의 큰값이 뒤로간다.*/
       }
       .item:nth-child(2) {
         flex-grow: 4;

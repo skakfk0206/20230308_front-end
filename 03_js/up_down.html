@@ -1,0 +1,31 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1~100 사이의 숫자
+      var num = Math.floor(Math.random() * 100) + 1;
+
+      while (true) {
+        // 문자열로 값을 받는다.
+        var answer = prompt("숫자를 입력해주세요", "");
+        var answerNum = parseInt(answer);
+        if (answer === "") {
+          alert("숫자만 입력 가능합니다.");
+        }
+
+        // 숫자가 작으면 블라블라~
+        if (num === answerNum) {
+          alert("정답입니다.");
+          break;
+        } else if (num < answerNum) {
+          alert("입력한 숫자가더 큼니다.");
+        } else {
+          alert("입력한 숫자가 더 작습니다.");
+        }
+      }
+    </script>
+  </body>
+</html>

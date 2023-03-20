@@ -160,3 +160,55 @@ let makeUser = (name, age) => ({
 let user = makeUser("ji", 36);
 
 console.log(user);
+
+//재귀 함수 - 함수가 자신을 호출하는 형식의 함수
+// => 종료 조건이 없으면 무한 반복에 빠진다.
+function fibonacci(n) {
+  //   let resule = 0;
+  //   for (let i = 0; i <= n; i++) {
+  //     resule += i;
+  //   }
+  //   return resule;
+  if (n <= 1) {
+    return 1;
+  }
+  return n + fibonacci(n - 1);
+}
+
+console.log(fibonacci(10));
+
+/*
+콜백 함수
+  - 다른 함수에 인자로 전달되는 함수.
+    => 함수의 연산결과를 가지고 어떠한 동작을 할지 나중에 결정될 때 사용한다.
+  - 콜백 함수에 인자를 전달할 수 있다.
+    => 연산결과를 전달하여 그 시점에서 원하는 동작을 함수형태로 작성한다.
+    => 익명함수를 주로 사용한다.
+*/
+
+//같은 동작을 n번 실행하는 함수.
+function repeat(n, callback) {
+  for (let i = 0; i < n; i++) {
+    callback(i);
+  }
+}
+repeat(7, function (i) {
+  console.log(i + 1 + " 번째 실행...");
+  console.log("동작 을 실행 합니다.");
+});
+
+//미리 작성된 함수전달
+repeat(7, print);
+
+function print(i) {
+  console.log(i + 1 + " 번째 실행...");
+  console.log("동작 을 실행 합니다.");
+}
+
+//Q: 숫자 두개를 전달받아 더하고  그더한 결과를 콜백함수에 전달하는 함수 작성.
+function subNum콜백(a, b, callback) {
+  callback(a + b);
+}
+subNum콜백(2, 3, function (data) {
+  console.log("서버 전송 :" + data);
+});

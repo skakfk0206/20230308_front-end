@@ -1,38 +1,51 @@
-const today = new Date();
-
-function formatDate(date) {
-  return new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
-}
-
-export function TodoList() {
-  return <h1>To Do List for {formatDate(today)}</h1>;
-}
-
-export default function Avatar() {
-  const avatar = "https://i.imgur.com/7vQD0fPs.jpg";
-  const description = "Gregorio Y. Zara";
-  const title = "React";
-
+// 첫번쨰 매개변수로 props 객체가 넘어온다. {}를 넣으면 비구조화 할당이 된다.
+function Avatar({ person, size }) {
   return (
-    <>
-      <h1
-        style={{
-          color: "red",
+    <img
+      className="avatar"
+      src={`https://i.imgur.com/${person.imageId}.jpg`}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+  );
+}
+
+export default function Profile() {
+  return (
+    <div>
+      <Avatar
+        size={100}
+        person={{
+          name: "Katsuko Saruhashi",
+          imageId: "YfeOqp2",
         }}
-      >
-        Hello {title}!{" "}
-      </h1>
-      <h2>오늘은 {formatDate(today)}</h2>
-      <img className="avatar" src={avatar} alt={description} />;
-    </>
+      />
+      <Avatar
+        size={80}
+        person={{
+          name: "Aklilu Lemma",
+          imageId: "OKS67lh",
+        }}
+      />
+      <Avatar
+        size={50}
+        person={{
+          name: "Lin Lanying",
+          imageId: "1bX5QH6",
+        }}
+      />
+    </div>
   );
 }
 
 /*
-   JSX 안에 자바 값 (표현식) 포함시키기.
-     - JSX 안에서 {}에 자바표현식을 작성하면 동적인 값을 사용할수 있다.
-       => 변수 ,연산, 함수호출,객체 리터럴등 다양한 자바스크립트 값을 표함할수있다.
-       => 값으로 평가되는 표현식이여야 한다. 즉 if문,for문등은 사용할수없다 .
-     - style 속성을 통해 스타일을 지정할 떄는 객체를 전달해야한다.
-       =>  {{}}형태로  작성한다. 겉의 {} 자자값을 명시하고, 안쪽의 {}를 객체 리터럴이다.
+  props
+   
+   - 같은 커포넌트를 여러번 사용할 때 내용 등을 다르게 렌더링할 수 있다.
+   - 컴퍼넌트에 프로퍼티들을 나열하면 자식 컴퍼넌트의 첫번째 매개변수로 props 객체가 전달된다.
+      => key-value 형태로 전달된다.
+      => 매개변수에 {}를 사용하면 비구조화 할당이 되어 코드를 간소화 할수있다.
+   -매개변수 기본값 문법을 사용하여 프로퍼티가 전달되지 않았을때 기본값을 적용할 수 있다.
+   -부모 컴퍼넌트가 받은 props를 자식 컴퍼넌트한테 모두 전달할때는 펼침 연산자로 통해서 간단하게 전달할수있다.
 */

@@ -1,9 +1,10 @@
-import Counter from "./Components/Pointer";
+import Input from "./components/Input";
+import Pointer from "./components/Pointer";
 
 export default function App() {
   return (
     <div>
-      <Counter />
+      <Input />
     </div>
   );
 }

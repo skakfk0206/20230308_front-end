@@ -1,22 +1,43 @@
-import { useState } from "react";
-import TodoHeader from "./components/TodoHeader";
-import TodoInput from "./components/TodoInput";
-import TodoList from "./components/TodoList";
+import TodoProvider from "./state/todos";
+import Todos from "./components/Todos";
 
-const initialState = [
-  { id: 1, text: "React 프로젝트 생성하기", done: true },
-  { id: 2, text: "컴포넌트 만들기", done: true },
-  { id: 3, text: "상태 관리하기", done: false },
-];
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style: none;
+  }
+`;
 
 export default function App() {
-  const [todos, setTodos] = useState(initialState);
-
   return (
-    <div>
-      <TodoHeader />
-      <TodoInput />
-      <TodoList todos={todos} />
-    </div>
+    <TodoProvider>
+      <GlobalStyle />
+      <ThemeProvider
+        theme={{
+          colors: {
+            main: "#66a6ff",
+          },
+        }}
+      >
+        <Container>
+          <Todos />
+        </Container>
+      </ThemeProvider>
+    </TodoProvider>
   );
 }
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+`;

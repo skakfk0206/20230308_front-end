@@ -12,7 +12,6 @@ function TodoInput() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // form의 기본 기능 실행 x.
-
     if (edit) {
       dispatch({ type: "CREATE_TODO", text: text });
       inputRef.current.focus();
@@ -33,8 +32,9 @@ function TodoInput() {
             autoFocus
           />
         )}
-
-        <Button width="100%">{edit ? "등록" : "추가"}</Button>
+        <BtnWrapper>
+          <Button width="100%">{edit ? "등록" : "추가"}</Button>
+        </BtnWrapper>
       </form>
     </Container>
   );
@@ -43,6 +43,8 @@ function TodoInput() {
 const slideUp = keyframes`
   from {
     transform: translateY(100%);
+    opacity: 0;
+
   }
 `;
 
@@ -55,9 +57,15 @@ const Container = styled.div`
       margin-bottom: 4px;
       outline: none;
       padding: 5px;
-      animation: ${slideUp} 0.4s;
+      animation-name: ${slideUp};
+      animation-duration: 0.4s;
     }
   }
+`;
+
+const BtnWrapper = styled.div`
+  position: relative;
+  z-index: 2;
 `;
 
 export default React.memo(TodoInput);
